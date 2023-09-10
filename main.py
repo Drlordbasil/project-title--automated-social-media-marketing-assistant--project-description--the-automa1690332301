@@ -1,3 +1,6 @@
+from collections import deque
+import random
+import datetime
 Here are some improvements to the Python program:
 
 1. Use meaningful variable and method names: Instead of using generic names like `data`, `text`, and `topics`, use more descriptive names like `analysis_data`, `text_to_generate_hashtags`, and `content_topics` to improve readability.
@@ -8,7 +11,7 @@ Here are some improvements to the Python program:
 
 4. Use f-strings for string formatting: Update the program to use f-strings for string formatting, which improves readability and reduces the number of string concatenations.
 
-5. Use a dictionary instead of if-elif-else statements: Replace the if-elif-else statements in the `run` method with a dictionary to map each choice to its corresponding method. This improves efficiency and reduces code duplication.
+5. Use a dictionary instead of if -elif -else statements: Replace the if -elif -else statements in the `run` method with a dictionary to map each choice to its corresponding method. This improves efficiency and reduces code duplication.
 
 6. Simplify the Scheduler class: Instead of using a list and popping the first element, use a deque from the `collections` module. This provides efficient appending and popping from both ends of the deque.
 
@@ -19,9 +22,7 @@ Here are some improvements to the Python program:
 Here is the updated code:
 
 ```python
-import datetime
-import random
-from collections import deque
+
 
 class SmartSocialPro:
     def __init__(self):
@@ -125,6 +126,7 @@ class Post:
         except ValueError:
             print("Invalid time format. Please use HH:MM.")
 
+
 class Scheduler:
     def __init__(self):
         self.posts = deque()
@@ -138,11 +140,13 @@ class Scheduler:
         else:
             print("No posts available.")
 
+
 class ContentManager:
     def generate_content(self):
         # Placeholder logic to generate content
         topics = ["Technology", "Fashion", "Food"]
         return random.choice(topics)
+
 
 class Analytics:
     def analyze(self):
@@ -155,17 +159,21 @@ class Analytics:
         }
         return metrics
 
+
 class HashtagGenerator:
     def generate_hashtags(self, text):
         # Placeholder logic to generate hashtags
         words = text.split(" ")
-        hashtags = ["#" + word for word in words if word.isalnum() and not word.startswith("#")]
+        hashtags = ["#" + word for word in words if word.isalnum()
+                    and not word.startswith("#")]
         return hashtags
+
 
 class SocialMediaMonitor:
     def start_monitoring(self):
         # Placeholder logic to start monitoring
         print("Social media monitoring started.")
+
 
 class CompetitorAnalyzer:
     def analyze(self, competitor):
@@ -178,15 +186,18 @@ class CompetitorAnalyzer:
         }
         return analysis
 
+
 class UserEngagementOptimizer:
     def optimize(self):
         # Placeholder logic to optimize user engagement
         print("User engagement optimized.")
 
+
 class AdCampaignManager:
     def manage(self, campaign):
         # Placeholder logic to manage ad campaign
         print("Ad campaign", campaign, "managed successfully.")
+
 
 # Main program
 if __name__ == "__main__":
